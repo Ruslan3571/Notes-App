@@ -29,14 +29,30 @@ addBox.addEventListener("click", () => {
   popupBox.classList.add("show");
 });
 
-closeIcon.addEventListener("click", () => {
+const closePopup = () => {
   isUpdate = false;
   titleTag.value = "";
   descTag.value = "";
   addBtn.innerText = "Add a Note";
   popupTitle.innerText = "Add a new Note";
   popupBox.classList.remove("show");
-});
+};
+
+const handleEscapeKey = (event) => {
+  if (event.key === "Escape") {
+    closePopup();
+  }
+};
+
+const handleOutsideClick = (event) => {
+  if (event.target === popupBox) {
+    closePopup();
+  }
+};
+
+closeIcon.addEventListener("click", closePopup);
+document.addEventListener("keydown", handleEscapeKey);
+popupBox.addEventListener("click", handleOutsideClick);
 
 function showNotes() {
   document.querySelectorAll(".note").forEach((note) => note.remove());

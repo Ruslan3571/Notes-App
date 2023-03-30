@@ -100,6 +100,7 @@ header {
 }
 
 .settings .menu {
+  width: 102px;
   position: absolute;
   bottom: 0;
   right: -5px;
