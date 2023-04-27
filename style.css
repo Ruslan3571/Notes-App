@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #88abff;
+  background: #3757a5;
 }
 
 .wrapper {
@@ -69,12 +69,14 @@ header {
 }
 
 .note p {
+  overflow-wrap: break-word;
   font-size: 22px;
   font-weight: 500;
 }
 
 .note span {
   display: block;
+  word-wrap: break-word;
   margin-top: 5px;
   color: #575757;
   font-size: 16px;
@@ -167,7 +169,7 @@ header {
   pointer-events: auto;
 }
 .popup .content {
-  width: calc(100%-15px);
+  width: fit-content;
   background: #fff;
   border-radius: 5px;
 }
